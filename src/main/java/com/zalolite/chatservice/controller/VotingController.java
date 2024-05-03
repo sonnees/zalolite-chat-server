@@ -40,7 +40,7 @@ public class VotingController {
 
     @PostMapping("/append-voter")
     public Mono<ResponseEntity<String>> appendVoter(@RequestBody VotingDTO info){
-        log.info("### enter create voting ###");
+        log.info("### enter append voting ###");
         log.info("# {} #", jsonConverter.objToString(info));
         return votingRepository.save(new Voting(info))
                 .switchIfEmpty(Mono.defer(() -> Mono.just(ResponseEntity.status(500).body("Create voting fail"))).then(Mono.empty()))
