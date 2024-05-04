@@ -45,7 +45,7 @@ public class UserController {
         log.info("# token: {} #", token);
         // check auth
         return webClient.get()
-               .uri("https://ACCOUNT-SERVICE/api/v1/auth/get-userid/" + token)
+               .uri("https://zalolite-account-server-production.up.railway.app/api/v1/auth/get-userid/" + token)
                .retrieve()
                .bodyToMono(String.class)
                .flatMap(id -> {
