@@ -29,7 +29,7 @@ public class GroupController {
                 .flatMap(g -> Mono.just(ResponseEntity.status(200).body("Create group success")));
     }
 
-    @GetMapping("/info")
+    @PostMapping("/info")
     public Mono<ResponseEntity<String>> getInfoGroup(@RequestParam UUID idGroup){
         log.info("### enter get info group ###");
         log.info("# {} #", idGroup);
