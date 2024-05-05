@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRep
 
 @SpringBootApplication
 @EnableReactiveMongoRepositories
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 public class ChatServiceApplication implements CommandLineRunner{
 	@Autowired
 	UserRepository userRepository;
