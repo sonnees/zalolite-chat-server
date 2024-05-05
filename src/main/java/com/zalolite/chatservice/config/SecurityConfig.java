@@ -66,7 +66,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    @LoadBalanced
+//    @LoadBalanced
     public WebClient.Builder loadBalancedWebClientBuilder(HttpClient httpClient) {
         return WebClient.builder().clientConnector(new ReactorClientHttpConnector(httpClient));
     }
